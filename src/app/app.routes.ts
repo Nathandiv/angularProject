@@ -10,7 +10,7 @@ import { LoginComponent } from './Pages/login/login.component';
 import { Error404Component } from './Pages/error404/error404.component';
 
 export const routes: Routes = [
-  {path: '/', component: HomeComponent},
+  {path:'', component: HomeComponent},
   {path:'blog',component:BlogComponent},
   {path:'register',component:RegisterComponent},
   {path:'about',component:AboutComponent},
