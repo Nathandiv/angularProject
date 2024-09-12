@@ -12,6 +12,9 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent implements OnInit {
   title = 'Sponsor';
+
+
+
   ngOnInit(): void {
     initFlowbite();
   }
