@@ -4,7 +4,7 @@ import { FooterComponent } from '../../UI/Shared-UI/footer/footer.component';
 
 @Component({
   selector: 'app-about',
-  standalone: true,
+  standalone:true,
   imports: [NavComponent,FooterComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
