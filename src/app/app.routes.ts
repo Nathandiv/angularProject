@@ -21,5 +21,5 @@ export const routes: Routes = [
   {path:'registerlogin',component:RegisterloginComponent},
   {path:'**',component:Error404Component},
 {path:'status',component:StatusComponent},
-{path:'opportunty',component:OpportunitiesComponent}
+{path:'opportunity',component:OpportunitiesComponent}
 ]
