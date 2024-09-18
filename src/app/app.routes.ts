@@ -8,6 +8,8 @@ import { AboutComponent } from './Pages/about/about.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { Error404Component } from './Pages/error404/error404.component';
+import { StatusComponent } from './Pages/status/status.component';
+import { OpportunitiesComponent } from './Pages/opportunities/opportunities.component';
 
 export const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -17,5 +19,7 @@ export const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
   {path:'registerlogin',component:RegisterloginComponent},
-  {path:'**',component:Error404Component}
+  {path:'**',component:Error404Component},
+{path:'status',component:StatusComponent},
+{path:'opportunty',component:OpportunitiesComponent}
 ]
