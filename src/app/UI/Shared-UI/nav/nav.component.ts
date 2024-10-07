@@ -5,33 +5,43 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterModule, CommonModule   ],
+  imports: [RouterModule, CommonModule],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+  styleUrl: './nav.component.css',
 })
 export class NavComponent {
+  isLoggedIn = true;
 
+  constructor(private router: Router) {}
 
-  constructor(private router: Router){}
+  menuItems: any[] = [
+    {
+      label: 'Home',
+      href: '',
+      
+    },
+    {
+      label: '',
+      href: '',
+    },
+    {
+      label: '',
+      href: '',
+    },
+  ];
 
-
-
-
-    getButtons() {
-      return [
-        { label: 'Home', route: '/' },
-        { label: 'Register', route: '/register' },
-        { label: 'Status', route: '/status' },
-        { label: 'Discover', route: '/opportunity' },
-        { label: 'Blog', route: '/blog' },
-        { label: 'About', route: '/about' },
-        { label: 'Contact', route: '/contact' },
-        { label: 'Login', route: '/login' }
-      ];
-    }
-
-
-
+  // getButtons() {
+  //   return [
+  //     { label: 'Home', route: '/' },
+  //     { label: 'Register', route: '/register' },
+  //     { label: 'Status', route: '/status' },
+  //     { label: 'Discover', route: '/opportunity' },
+  //     { label: 'Blog', route: '/blog' },
+  //     { label: 'About', route: '/about' },
+  //     { label: 'Contact', route: '/contact' },
+  //     { label: 'Login', route: '/login' }
+  //   ];
+  // }
 
   //   const currentRoute = this.router.url;
   //  /// Put all the routes that you want to show on the home below bra
@@ -54,8 +64,4 @@ export class NavComponent {
   //         return []
   //   }
   // }
-
-
 }
-
-
