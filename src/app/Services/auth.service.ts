@@ -6,6 +6,9 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
+  register(arg0: { username: string; email: string; password: string; }) {
+    throw new Error('Method not implemented.');
+  }
   users: UserInterface[] = [];
   router = inject(Router);
 
