@@ -6,45 +6,35 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  register(arg0: { username: string; email: string; password: string; }) {
-    throw new Error('Method not implemented.');
-  }
-  users: UserInterface[] = [];
-  router = inject(Router);
+  user: UserInterface[] = []
+  router = inject(Router)
 
-  constructor() {}
-
-  onRegister(userData: UserInterface) {
-    const userEmail = userData.email;
-
-    for (let i = 0; i < this.users.length; i++) {
-      if (this.users[i].email == userEmail) {
-        alert(`${userEmail} already taken`);
-        return;
-      }
-    }
-
-    this.users.push(userData);
-
-    alert(`${userData.name} was registered successfully!!!`);
-    this.router.navigate(['/Login']);
-  }
-
-  onLogin(userData: UserInterface) {
+  constructor() { }
+    
+  register(userData: UserInterface){
+    const userEmail = userData.email
     console.log(userData);
-
-    for (let i = 0; i < this.users.length; i++) {
-      if (
-        this.users[i].email == userData.email &&
-        this.users[i].password == userData.password
-      ) {
-        alert(`Welcome ${this.users[i].name}`);
-        this.router.navigate(['/dashboard']);
-
-        return;
-      }
+  for (let index = 0; index < this.user.length; index++) {
+    if(this.user[index].email == userEmail){
+      alert('email taken')
     }
-
-    alert('Email or Password incorrect');
   }
+  this.user.push(userData)
+  alert('registered')
+ this.router.navigateByUrl('/login')
+}
+
+login(userData: UserInterface){
+
+for (let i = 0; i < this.user.length; i++) {
+  if(this.user[i].email === userData.email && this.user[i].password === userData.password){
+    alert(`Welcome ${this.user[i].username} .`)
+    this.router.navigateByUrl('/')
+  }
+  else{
+    alert('wrong details')  
+}
+}
+
+}
 }
