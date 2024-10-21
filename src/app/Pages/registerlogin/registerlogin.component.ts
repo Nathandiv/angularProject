@@ -17,24 +17,30 @@ export class RegisterloginComponent {
 
 
 
-  onRegister(username: string, email: string, password: string) {
+  onRegister(name:string, username: string, email: string, password: string) {
+
+    if (!name) {
+      alert("Password is required")
+      return;
+    }
+    if (!email) {
+      alert("Email is required")
+      return;
+    }
 
     if (!username) {
       alert("Username is required")
       return;
     }
 
-    if (!email) {
-      alert("Email is required")
-      return;
-    }
 
     if (!password) {
       alert("Password is required")
       return;
     }
 
-    // this.authService.onRegister({username, email, password})
+
+    // this.authService.onRegister({name,email,username, password})
   }
 
 
