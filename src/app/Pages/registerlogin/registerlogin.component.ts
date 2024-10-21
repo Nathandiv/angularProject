@@ -34,7 +34,7 @@ export class RegisterloginComponent {
       return;
     }
 
-    this.authService.onRegister({username, email, password})
+    // this.authService.onRegister({username, email, password})
   }
 
 
