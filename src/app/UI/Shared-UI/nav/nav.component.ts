@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -11,8 +11,13 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class NavComponent {
   isLoggedIn = true;
+  currentPath:string = this.route.snapshot.routeConfig?.path || ''
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    console.log(this.checkIfLoggedIn()); // ActivatedRouteSnapshot
+  }
 
   menuItems: any[] = [
     {
@@ -29,6 +34,10 @@ export class NavComponent {
       href: '',
     },
   ];
+
+  checkIfLoggedIn() {
+    return localStorage.getItem('user') ? true : false
+  }
 
   // getButtons() {
   //   return [
