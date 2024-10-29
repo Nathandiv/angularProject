@@ -16,7 +16,20 @@ export class NavComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.isLoggedIn = this.authService.isLoggedIn();
+    // Check login status when the component initializes
+    this.isLoggedIn = this.authService.isAuthenticated();
+  }
+
+  // Method to handle login action
+  onLogin(userData: { email: string; password: string }) {
+    this.authService.login(userData);
+    this.isLoggedIn = this.authService.isAuthenticated(); // Update login status after login
+  }
+
+  // Method to handle logout action
+  onLogout() {
+    this.authService.logout();
+    this.isLoggedIn = this.authService.isAuthenticated(); // Update login status after logout
   }
 
   // getButtons() {
