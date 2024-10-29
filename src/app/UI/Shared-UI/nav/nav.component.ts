@@ -32,6 +32,7 @@ export class NavComponent implements OnInit {
     this.isLoggedIn = this.authService.isAuthenticated(); // Update login status after logout
   }
 
+  
  
 }
 
