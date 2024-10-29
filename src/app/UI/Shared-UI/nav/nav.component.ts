@@ -32,7 +32,10 @@ export class NavComponent implements OnInit {
     this.isLoggedIn = this.authService.isAuthenticated(); // Update login status after logout
   }
 
-  // getButtons() {
+ 
+}
+
+ // getButtons() {
   //   return [
   //     { label: 'Home', route: '/' },
   //     { label: 'Register', route: '/register' },
@@ -66,4 +69,3 @@ export class NavComponent implements OnInit {
   //         return []
   //   }
   // }
-}
