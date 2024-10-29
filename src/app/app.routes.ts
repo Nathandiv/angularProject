@@ -13,7 +13,8 @@ import { OpportunitiesComponent } from './Pages/opportunities/opportunities.comp
 import { NgModel } from '@angular/forms';
 
 export const routes: Routes = [
-  {path:'', component: HomeComponent},
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'home', component: HomeComponent},
   {path:'blog',component:BlogComponent},
   {path:'register',component:RegisterComponent},
   {path:'about',component:AboutComponent},
