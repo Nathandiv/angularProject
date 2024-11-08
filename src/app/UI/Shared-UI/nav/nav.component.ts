@@ -32,41 +32,44 @@ export class NavComponent implements OnInit {
     this.isLoggedIn = this.authService.isAuthenticated(); // Update login status after logout
   }
 
-  
- 
+  toggleMenu() {
+    console.log('Toggle mMenu');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu!.classList.toggle('hidden');
+  }
 }
 
- // getButtons() {
-  //   return [
-  //     { label: 'Home', route: '/' },
-  //     { label: 'Register', route: '/register' },
-  //     { label: 'Status', route: '/status' },
-  //     { label: 'Discover', route: '/opportunity' },
-  //     { label: 'Blog', route: '/blog' },
-  //     { label: 'About', route: '/about' },
-  //     { label: 'Contact', route: '/contact' },
-  //     { label: 'Login', route: '/login' }
-  //   ];
-  // }
+// getButtons() {
+//   return [
+//     { label: 'Home', route: '/' },
+//     { label: 'Register', route: '/register' },
+//     { label: 'Status', route: '/status' },
+//     { label: 'Discover', route: '/opportunity' },
+//     { label: 'Blog', route: '/blog' },
+//     { label: 'About', route: '/about' },
+//     { label: 'Contact', route: '/contact' },
+//     { label: 'Login', route: '/login' }
+//   ];
+// }
 
-  //   const currentRoute = this.router.url;
-  //  /// Put all the routes that you want to show on the home below bra
+//   const currentRoute = this.router.url;
+//  /// Put all the routes that you want to show on the home below bra
 
-  //   if (currentRoute === '/'){
-  //    return [
+//   if (currentRoute === '/'){
+//    return [
 
-  //     { label : 'Gogh', route: '/about'},
-  //     {label:'nbjhbhb ', route: '/register'
-  //        }
-  //    ];
-  //    } else if (currentRoute === '/login')
-  //     return [
+//     { label : 'Gogh', route: '/about'},
+//     {label:'nbjhbhb ', route: '/register'
+//        }
+//    ];
+//    } else if (currentRoute === '/login')
+//     return [
 
-  //        { label : 'Go', route: '/about'},
-  //     // {label:'Go to register', route: '/register'}
-  //     {label : 'djhbn' ,  route: '/contact'}
+//        { label : 'Go', route: '/about'},
+//     // {label:'Go to register', route: '/register'}
+//     {label : 'djhbn' ,  route: '/contact'}
 
-  //     ];
-  //         return []
-  //   }
-  // }
+//     ];
+//         return []
+//   }
+// }
